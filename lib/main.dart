@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_flutter/example_screens/count_example_with_provider.dart';
+import 'package:provider_flutter/example_screens/sliderColor_change_example.dart';
 import 'package:provider_flutter/provider/count_provider.dart';
+import 'package:provider_flutter/provider/slider_color_change_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return ChangeNotifierProvider(
-      create: (_) => CountProvider(),
+    return MultiProvider(
+
+      providers: [
+        ChangeNotifierProvider(create: (_) => CountProvider()),
+        ChangeNotifierProvider(create: (_) => SliderColorChangeProvider()),
+      ],
+
       child:MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -23,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  CountExample(),
+        home:  SliderColorChangeContainer(),
       ) ,
     );
 
