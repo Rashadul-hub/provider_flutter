@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_flutter/provider/count_provider.dart';
 
-class CountExample extends StatefulWidget {
-  const CountExample({super.key});
+class CountExampleScreen extends StatefulWidget {
+  const CountExampleScreen({super.key});
 
   @override
-  State<CountExample> createState() => _CountExampleState();
+  State<CountExampleScreen> createState() => _CountExampleScreenState();
 }
 
-class _CountExampleState extends State<CountExample> {
+class _CountExampleScreenState extends State<CountExampleScreen> {
 
 
   @override

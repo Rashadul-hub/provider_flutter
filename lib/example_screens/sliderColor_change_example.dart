@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_flutter/provider/slider_color_change_provider.dart';
 
-class SliderColorChangeContainer extends StatefulWidget {
-  const SliderColorChangeContainer({super.key});
+class SliderColorChangeContainerScreen extends StatefulWidget {
+  const SliderColorChangeContainerScreen({super.key});
 
   @override
-  State<SliderColorChangeContainer> createState() =>
-      _SliderColorChangeContainerState();
+  State<SliderColorChangeContainerScreen> createState() =>
+      _SliderColorChangeContainerScreenState();
 }
 
-class _SliderColorChangeContainerState
-    extends State<SliderColorChangeContainer> {
+class _SliderColorChangeContainerScreenState
+    extends State<SliderColorChangeContainerScreen> {
   @override
   Widget build(BuildContext context) {
     //final sliderColorChangeProvider = Provider.of<SliderColorChangeProvider>(context, listen: false);
