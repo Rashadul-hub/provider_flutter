@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_flutter/example_screens/favourite/my_favourite_lists_screen.dart';
 import 'package:provider_flutter/provider/favourite_provider.dart';
 
 class FavouriteScreen extends StatefulWidget {
@@ -20,6 +21,22 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Favourite App'),
+        actions: [
+          InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> MyFavouriteListsScreen()));
+            },
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('My Favourites'),
+                Icon(Icons.favorite_sharp),
+              ],
+            ),
+          ),
+          SizedBox(width: 4,)
+        ],
       ),
       body: Column(
         children: [
